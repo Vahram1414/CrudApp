@@ -24,5 +24,8 @@ public class AppRunner {
         Skill createdSkill = skillRepository.save(skill);
         System.out.println(createdSkill);
 
+        skill.setName("reading");
+        skillRepository.update(skill);
+
     }
 }

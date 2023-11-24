@@ -1,7 +1,6 @@
 package com.vagram.crudapp.repository.gson;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.vagram.crudapp.model.Skill;
 import com.vagram.crudapp.model.Status;
@@ -12,6 +11,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class GsonSkillRepositoryImpl implements SkillRepository {
@@ -38,27 +38,8 @@ public class GsonSkillRepositoryImpl implements SkillRepository {
             throw new RuntimeException();
         }
 
-
-//        try (Writer writer = Files.newBufferedWriter(Paths.get(SKILL_FILE_LOCATION))) {
-//            return GSON.fromJson(writer.toString(), new TypeToken<List<Skill>>(){}.getType());
-//        } catch (IOException e) {
-//            return new ArrayList<>();
-//        }
-//        writer.write("Skill");
-//        writer.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-//        String json = GSON.toJson(skills);
-//        try {
-//            PrintStream prStr = new PrintStream("developer.json");
-//        } catch (FileNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
         //TODO: write json string to file
     }
-
 
     private Integer generateId(List<Skill> skills) {
         return skills.stream()
@@ -86,19 +67,19 @@ public class GsonSkillRepositoryImpl implements SkillRepository {
         return skillToSave;
     }
 
-    public Skill update(Skill skillToUpdate) {
+    public Skill update(Skill skillToUpdate) throws IOException {
         List<Skill> skills = getAllSkillsFromFile();
-//        Integer id = skillToUpdate.getId();
-        Integer id = generateId(skills);
-        skillToUpdate.setId(id);
+        skillToUpdate.getId();
+//        Skill obj = skills.get(4);
+        skills.remove(3);
         skills.add(skillToUpdate);
-//        writeSkillsToFile(skills);
+        writeSkillsToFile(skills);
         return skillToUpdate;
     }
 
-    public void deleteById(Integer integerId) {
+    public boolean deleteById(Integer integerId) {
         List<Skill> skills = getAllSkillsFromFile();
-//        skills.remove(integerId);
-//        writeSkillsToFile(skills);
+        skills.get(integerId).setStatus(Status.DELETED);
+        return true;
     }
 }

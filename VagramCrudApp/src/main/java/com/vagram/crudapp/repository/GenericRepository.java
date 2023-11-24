@@ -10,7 +10,7 @@ public interface GenericRepository<T, ID> {
 
     T save(T t) throws IOException;
 
-    T update(T t);
+    T update(T t) throws IOException;
 
-    void deleteById(ID id);
+    boolean deleteById(ID id);
 }
