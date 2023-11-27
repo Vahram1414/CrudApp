@@ -21,11 +21,11 @@ public class AppRunner {
         skill.setName("T");
         skill.setStatus(Status.ACTIVE);
 
+
         Skill createdSkill = skillRepository.save(skill);
+        createdSkill.setName("reading2");
+        skillRepository.update(createdSkill);
+//        Skill skillToUpdate = skillRepository.update(skill);
         System.out.println(createdSkill);
-
-        skill.setName("reading");
-        skillRepository.update(skill);
-
     }
 }
