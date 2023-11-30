@@ -16,12 +16,7 @@
   },
   {
     "id": 4,
-    "name": "reading",
-    "status": "ACTIVE"
-  },
-  {
-    "id": 5,
     "name": "reading2",
-    "status": "ACTIVE"
+    "status": "DELETED"
   }
 ]

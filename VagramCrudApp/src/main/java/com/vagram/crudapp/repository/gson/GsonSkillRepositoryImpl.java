@@ -3,6 +3,7 @@ package com.vagram.crudapp.repository.gson;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.vagram.crudapp.model.Skill;
+import com.vagram.crudapp.model.Status;
 import com.vagram.crudapp.repository.SkillRepository;
 
 import java.io.*;
@@ -74,9 +75,11 @@ public class GsonSkillRepositoryImpl implements SkillRepository {
         return skillToUpdate;
     }
 
-    public boolean deleteById(Integer integerId) {
+    public boolean deleteById(Integer integerId) throws IOException {
         List<Skill> skills = getAllSkillsFromFile();
-        skills.remove(4);
+        Skill skill = skills.get(integerId - 1);
+        skill.setStatus(Status.DELETED);
+        writeSkillsToFile(skills);
         return true;
     }
 }

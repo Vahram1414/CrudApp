@@ -27,5 +27,8 @@ public class AppRunner {
         skillRepository.update(createdSkill);
 //        Skill skillToUpdate = skillRepository.update(skill);
         System.out.println(createdSkill);
+
+        skillRepository.deleteById(skill.getId());
+
     }
 }
