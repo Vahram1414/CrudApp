@@ -12,5 +12,5 @@ public interface GenericRepository<T, ID> {
 
     T update(T t) throws IOException;
 
-    boolean deleteById(ID id) throws IOException;
+    boolean deleteById(ID id);
 }
