@@ -13,6 +13,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class GsonSkillRepositoryImpl implements SkillRepository {
     private final Gson GSON = new Gson();
@@ -28,7 +30,7 @@ public class GsonSkillRepositoryImpl implements SkillRepository {
         }
     }
 
-    private void writeSkillsToFile(List<Skill> a) throws IOException {
+    private void writeSkillsToFile(List<Skill> a) {
         try {
             FileWriter fileWriter = new FileWriter(SKILL_FILE_LOCATION);
             Gson gson = new Gson();
@@ -77,14 +79,12 @@ public class GsonSkillRepositoryImpl implements SkillRepository {
     }
 
     public boolean deleteById(Integer integerId) {
-        List<Skill> skills = getAllSkillsFromFile();
-        Skill skill = skills.get(integerId - 1);
-        skill.setStatus(Status.DELETED);
-        try {
-            writeSkillsToFile(skills);
-        } catch (IOException e) {
-            System.err.println(Arrays.toString(e.getStackTrace()));
-        }
+        List<Skill> skills = getAllSkillsFromFile().stream().peek(skill -> {
+            if (Objects.equals(skill.getId(), integerId)) {
+                skill.setStatus(Status.DELETED);
+            }
+        }).collect(Collectors.toList());
+        writeSkillsToFile(skills);
         return true;
     }
 }

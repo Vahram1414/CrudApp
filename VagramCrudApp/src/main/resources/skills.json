@@ -7,7 +7,7 @@
   {
     "id": 2,
     "name": "B",
-    "status": "ACTIVE"
+    "status": "DELETED"
   },
   {
     "id": 3,
@@ -17,11 +17,11 @@
   {
     "id": 4,
     "name": "reading2",
-    "status": "DELETED"
+    "status": "ACTIVE"
   },
   {
     "id": 5,
     "name": "reading2",
-    "status": "DELETED"
+    "status": "ACTIVE"
   }
 ]

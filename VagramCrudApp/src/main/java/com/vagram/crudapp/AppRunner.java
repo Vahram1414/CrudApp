@@ -18,7 +18,7 @@ public class AppRunner {
         System.out.println(skills);
 
         Skill skill = new Skill();
-        skill.setName("T");
+        skill.setName("S");
         skill.setStatus(Status.ACTIVE);
 
 
@@ -28,7 +28,7 @@ public class AppRunner {
 //        Skill skillToUpdate = skillRepository.update(skill);
         System.out.println(createdSkill);
 
-        skillRepository.deleteById(skill.getId());
+        skillRepository.deleteById(2);
 
     }
 }
