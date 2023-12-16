@@ -38,6 +38,10 @@ public class Skill {
         this.status = status;
     }
 
+    private void skillToSave() {
+        this.skillToSave();
+    }
+
     @Override
     public String toString() {
         return "Skill{" +
@@ -45,5 +49,9 @@ public class Skill {
                 ", name='" + name + '\'' +
                 ", status=" + status +
                 '}';
+    }
+
+    public boolean getById() {
+        return false;
     }
 }

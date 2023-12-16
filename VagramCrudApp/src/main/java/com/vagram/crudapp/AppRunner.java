@@ -7,7 +7,6 @@ import com.vagram.crudapp.repository.gson.GsonSkillRepositoryImpl;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.UUID;
 
 
 public class AppRunner {
@@ -25,7 +24,6 @@ public class AppRunner {
         Skill createdSkill = skillRepository.save(skill);
         createdSkill.setName("reading2");
         skillRepository.update(createdSkill);
-//        Skill skillToUpdate = skillRepository.update(skill);
         System.out.println(createdSkill);
 
         skillRepository.deleteById(2);
