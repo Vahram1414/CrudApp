@@ -1,7 +1,7 @@
 package com.vagram.crudapp.repository;
 
-import com.vagram.crudapp.model.Skill;
+import com.vagram.crudapp.model.Developer;
 
-public interface DeveloperRepository extends GenericRepository<Skill, Integer> {
+public interface DeveloperRepository extends GenericRepository<Developer, Integer> {
 
 }

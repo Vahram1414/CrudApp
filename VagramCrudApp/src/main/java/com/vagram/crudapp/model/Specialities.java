@@ -1,41 +1,40 @@
 package com.vagram.crudapp.model;
 
 public class Specialities {
-    public String getSpeciality1() {
-        return speciality1;
+    private Integer id;
+    private String name;
+    private Status status;
+
+    @Override
+    public String toString() {
+        return "Specialities{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", status=" + status +
+                '}';
     }
 
-    public void setSpeciality1(String speciality1) {
-        this.speciality1 = speciality1;
+    public Integer getId() {
+        return id;
     }
 
-    public String getSpeciality2() {
-        return speciality2;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public void setSpeciality2(String speciality2) {
-        this.speciality2 = speciality2;
+    public String getName() {
+        return name;
     }
 
-    public String getSpeciality3() {
-        return speciality3;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setSpeciality3(String speciality3) {
-        this.speciality3 = speciality3;
+    public Status getStatus() {
+        return status;
     }
 
-    private String speciality1 = "Java Developer";
-    private String speciality2 = "DevOps";
-    private String speciality3 = "Data Sientists";
-
-    public Specialities() {
-
-    }
-
-    public Specialities(String speciality1, String speciality2, String speciality3) {
-        this.speciality1 = speciality1;
-        this.speciality2 = speciality2;
-        this.speciality3 = speciality3;
+    public void setStatus(Status status) {
+        this.status = status;
     }
 }

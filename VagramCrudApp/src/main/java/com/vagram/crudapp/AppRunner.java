@@ -1,8 +1,11 @@
 package com.vagram.crudapp;
 
+import com.vagram.crudapp.model.Developer;
 import com.vagram.crudapp.model.Skill;
 import com.vagram.crudapp.model.Status;
+import com.vagram.crudapp.repository.DeveloperRepository;
 import com.vagram.crudapp.repository.SkillRepository;
+import com.vagram.crudapp.repository.gson.GsonDeveloperRepositoryImpl;
 import com.vagram.crudapp.repository.gson.GsonSkillRepositoryImpl;
 
 import java.io.IOException;
@@ -27,6 +30,11 @@ public class AppRunner {
         System.out.println(createdSkill);
 
         skillRepository.deleteById(2);
+
+        DeveloperRepository developerRepository = new GsonDeveloperRepositoryImpl();
+        List<Developer> developers = developerRepository.getAll();
+        System.out.println(developers);
+
 
     }
 }

@@ -1,4 +1,6 @@
 package com.vagram.crudapp.repository;
 
-public interface SpecialityRepository {
+import com.vagram.crudapp.model.Specialities;
+
+public interface SpecialityRepository extends GenericRepository<Specialities, Integer> {
 }
