@@ -70,6 +70,7 @@ public class GsonDeveloperRepositoryImpl implements DeveloperRepository {
         List<Developer> developers = getAllDevelopersFromFile().stream().peek(developer -> {
             if (Objects.equals(developer.getId(), developerToUpdate.getId())) {
                 developer.setFirstName(developerToUpdate.getFirstName());
+                developer.setLastName(developerToUpdate.getLastName());
                 developer.setStatus(developerToUpdate.getStatus());
             }
         }).collect(Collectors.toList());

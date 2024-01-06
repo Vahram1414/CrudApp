@@ -1,7 +1,107 @@
 [
   {
-    "speciality1": "Java Developer",
-    "speciality2": "DevOps",
-    "speciality3": "Data Sientists"
+    "id": 1,
+    "name": " ",
+    "status": "DELETED"
+  },
+  {
+    "id": 2,
+    "name": " ",
+    "status": "DELETED"
+  },
+  {
+    "id": 3,
+    "name": " ",
+    "status": "DELETED"
+  },
+  {
+    "id": 4,
+    "name": " ",
+    "status": "DELETED"
+  },
+  {
+    "id": 5,
+    "name": " ",
+    "status": "DELETED"
+  },
+  {
+    "id": 6,
+    "name": " ",
+    "status": "DELETED"
+  },
+  {
+    "id": 7,
+    "name": " ",
+    "status": "DELETED"
+  },
+  {
+    "id": 8,
+    "name": " ",
+    "status": "DELETED"
+  },
+  {
+    "id": 9,
+    "name": " ",
+    "status": "DELETED"
+  },
+  {
+    "id": 10,
+    "name": " ",
+    "status": "DELETED"
+  },
+  {
+    "id": 11,
+    "name": " ",
+    "status": "DELETED"
+  },
+  {
+    "id": 12,
+    "name": " ",
+    "status": "DELETED"
+  },
+  {
+    "id": 13,
+    "name": " ",
+    "status": "DELETED"
+  },
+  {
+    "id": 14,
+    "name": " ",
+    "status": "DELETED"
+  },
+  {
+    "id": 15,
+    "name": " ",
+    "status": "ACTIVE"
+  },
+  {
+    "id": 16,
+    "name": " ",
+    "status": "ACTIVE"
+  },
+  {
+    "id": 17,
+    "name": " ",
+    "status": "ACTIVE"
+  },
+  {
+    "id": 18,
+    "name": " ",
+    "status": "ACTIVE"
+  },
+  {
+    "id": 19,
+    "name": " ",
+    "status": "ACTIVE"
+  },
+  {
+    "id": 20,
+    "name": " ",
+    "status": "ACTIVE"
+  },
+  {
+    "id": 21,
+    "name": " ",
+    "status": "ACTIVE"
   }
 ]
